@@ -35,7 +35,8 @@ jobs:
         run: |
           mkdir -p _site
           cp -r index.html documentation.html 404.html robots.txt sitemap.xml assets tools _site/
-          if [ -f CNAME ]; then cp CNAME _site/; fi
+          # A CNAME file here would set a custom domain on every deploy; add one
+          # back only when the domain in scripts/build.py's SITE_URL is live.
 
       - uses: actions/upload-pages-artifact@v3
         with:

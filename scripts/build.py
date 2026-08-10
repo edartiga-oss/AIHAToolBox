@@ -26,9 +26,21 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_URL = "https://www.aihatoolbox.com"
+
+# Where the site is published. Canonical URLs, Open Graph tags, the sitemap, and
+# robots.txt are all derived from this, so it is the only line to change when the
+# site moves. To serve it from a custom domain instead, set this to the domain
+# (e.g. "https://www.aihatoolbox.com"), add a CNAME file holding that hostname,
+# and set the same domain under Settings -> Pages.
+SITE_URL = "https://edartiga-oss.github.io/AIHAToolBox"
+
+# The path GitHub Pages serves the site under ("/AIHAToolBox/" for a project site,
+# "/" at a domain root). Only absolute links need it — everything else is relative.
+SITE_PATH = (urlparse(SITE_URL).path.rstrip("/") or "") + "/"
+
 SITE_NAME = "AIHA Industrial Hygienist Toolbox"
 YEAR = 2025  # footer copyright year; bump when the site content is next revised
 
@@ -382,18 +394,20 @@ def build_documentation(categories: dict, tools: list) -> str:
 
 
 def build_404() -> str:
+    # Pages serves this for a missing path at any depth, so its links must be
+    # absolute — relative ones would resolve against whatever URL was mistyped.
     main = (
         '<div class="wrap wrap--narrow">\n'
         '  <div class="empty-state">\n'
         '    <h3>Page not found</h3>\n'
         '    <p>That page does not exist, or it has moved.</p>\n'
-        '    <p style="margin-top:1.5rem"><a class="btn btn--primary" href="/index.html">Browse all tools</a></p>\n'
+        '    <p style="margin-top:1.5rem"><a class="btn btn--primary" href="%sindex.html">Browse all tools</a></p>\n'
         '  </div>\n'
-        '</div>'
+        '</div>' % SITE_PATH
     )
     return page(title="Page not found | " + SITE_NAME,
                 description="The requested page could not be found.",
-                canonical_path="/404.html", main=main, base="/")
+                canonical_path="/404.html", main=main, base=SITE_PATH)
 
 
 def build_sitemap(tools: list) -> str:

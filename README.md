@@ -4,7 +4,7 @@ A static website cataloguing exposure assessment tools for industrial hygiene an
 health professionals. Every tool has a directory entry and a detail page describing what it does,
 what it needs, what it produces, and where to get it.
 
-Live site: **https://www.aihatoolbox.com**
+Live site: **https://edartiga-oss.github.io/AIHAToolBox/**
 
 ## How the site is put together
 
@@ -95,7 +95,23 @@ rendered as its own panel.
 
 `.github/workflows/pages.yml` runs on every push to `main`: it verifies the committed pages match
 the sources, checks internal links, assembles the publishable files into `_site`, and deploys to
-GitHub Pages. The custom domain is set by `CNAME`.
+GitHub Pages.
 
 To publish from a branch instead of Actions, point GitHub Pages at the repository root — the site
 works as-is, with the source directories simply going unused.
+
+### Moving to a custom domain
+
+The site is served from the project URL, so pages live under `/AIHAToolBox/`. `SITE_URL` in
+`scripts/build.py` is the only place that knows this — it drives canonical URLs, Open Graph tags,
+`sitemap.xml`, `robots.txt`, and the absolute paths on `404.html`. To move to a domain:
+
+1. Register the domain and point DNS at GitHub — a `CNAME` record on `www` to
+   `<owner>.github.io.`, plus A records on the apex to `185.199.108.153`, `185.199.109.153`,
+   `185.199.110.153`, `185.199.111.153`.
+2. Set `SITE_URL = "https://www.example.com"` in `scripts/build.py` and rebuild. `SITE_PATH`
+   becomes `/` on its own, so the absolute links on `404.html` follow automatically.
+3. Add a `CNAME` file at the repo root containing just that hostname, and copy it into `_site` in
+   `.github/workflows/pages.yml` (there is a comment marking the spot).
+4. Enter the same domain under Settings → Pages, wait for the DNS check to pass, then enable
+   **Enforce HTTPS**.

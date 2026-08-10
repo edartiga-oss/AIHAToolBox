@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.aihatoolbox.com/sitemap.xml
+Sitemap: https://edartiga-oss.github.io/AIHAToolBox/sitemap.xml
