@@ -12,7 +12,9 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build import ROOT, SITE_PATH  # noqa: E402  (single source of truth for both)
+
 PAGES = ["index.html", "documentation.html", "404.html"] + \
         sorted(str(p.relative_to(ROOT)) for p in (ROOT / "tools").glob("*.html"))
 
@@ -40,8 +42,17 @@ def main() -> int:
                     problems.append("%s: anchor #%s does not exist" % (page, fragment))
                 continue
             path = path.split("?")[0]
-            base = ROOT if path.startswith("/") else source.parent
-            target = (base / path.lstrip("/")).resolve()
+            if path.startswith("/"):
+                # Absolute links carry the publish prefix (e.g. /AIHAToolBox/);
+                # strip it to get back to a repo-relative path.
+                if SITE_PATH != "/" and not path.startswith(SITE_PATH):
+                    problems.append("%s: %s -> absolute link missing the %s prefix"
+                                    % (page, href, SITE_PATH))
+                    continue
+                base, path = ROOT, path[len(SITE_PATH):]
+            else:
+                base = source.parent
+            target = (base / path).resolve()
             if not target.exists():
                 problems.append("%s: %s -> missing file" % (page, href))
                 continue
