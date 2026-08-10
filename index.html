@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assessment Tools | AIHA Industrial Hygienist Toolbox</title>
+<meta name="description" content="A searchable directory of 25 exposure assessment tools for industrial hygiene — filter by tool type, hazard, exposure route, and assessment category.">
+<link rel="canonical" href="https://www.aihatoolbox.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIHA Industrial Hygienist Toolbox">
+<meta property="og:title" content="Assessment Tools | AIHA Industrial Hygienist Toolbox">
+<meta property="og:description" content="A searchable directory of 25 exposure assessment tools for industrial hygiene — filter by tool type, hazard, exposure route, and assessment category.">
+<meta property="og:url" content="https://www.aihatoolbox.com/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#002855">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">IH</span>
+      <span class="brand__text">
+        <small>AIHA</small>
+        Industrial Hygienist Toolbox
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Assessment Tools</a>
+      <a href="documentation.html">Supporting Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Exposure assessment tools, in one place</h1>
+    <p class="hero__lead">A curated directory of validated models and instruments for occupational, consumer, and environmental exposure assessment — what each tool does, what it needs, what it produces, and where to get it.</p>
+    <div class="stats">
+      <div class="stat"><span class="stat__value">25</span><span class="stat__label">Assessment tools</span></div>
+      <div class="stat"><span class="stat__value">3</span><span class="stat__label">Exposure routes</span></div>
+      <div class="stat"><span class="stat__value">7</span><span class="stat__label">Assessment categories</span></div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<div class="wrap">
+
+  <div class="toolbar">
+    <form id="tool-search" role="search" onsubmit="return false;">
+      <label class="visually-hidden" for="search-input">Search assessment tools</label>
+      <div class="search">
+        <span class="search__icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        </span>
+        <input id="search-input" type="search" autocomplete="off"
+               placeholder="Search by tool name, description, developer, output, or hazard…">
+        <button type="button" id="search-clear" class="search__clear" aria-label="Clear search">&times;</button>
+      </div>
+    </form>
+
+    <div class="filters">
+      <div class="filter-group" role="group" aria-label="Filter by tool type">
+        <span class="filter-group__label">Tool type</span>
+        <button type="button" class="chip" data-filter="type" data-value="" aria-pressed="true">All types</button>
+        <button type="button" class="chip" data-filter="type" data-value="Environmental Assessment" aria-pressed="false">Environmental Assessment (3)</button>
+        <button type="button" class="chip" data-filter="type" data-value="Product Assessment" aria-pressed="false">Product Assessment (8)</button>
+        <button type="button" class="chip" data-filter="type" data-value="Worker Exposure" aria-pressed="false">Worker Exposure (22)</button>
+      </div>
+      <div class="filter-group" role="group" aria-label="Filter by hazard">
+        <span class="filter-group__label">Hazard</span>
+        <button type="button" class="chip" data-filter="hazard" data-value="" aria-pressed="true">All hazards</button>
+        <button type="button" class="chip" data-filter="hazard" data-value="Chemical" aria-pressed="false">Chemical (24)</button>
+        <button type="button" class="chip" data-filter="hazard" data-value="Physical" aria-pressed="false">Physical (5)</button>
+      </div>
+      <div class="filter-group" role="group" aria-label="Filter by exposure route">
+        <span class="filter-group__label">Exposure route</span>
+        <button type="button" class="chip" data-filter="route" data-value="" aria-pressed="true">All routes</button>
+        <button type="button" class="chip" data-filter="route" data-value="inhalation" aria-pressed="false">Inhalation (15)</button>
+        <button type="button" class="chip" data-filter="route" data-value="dermal" aria-pressed="false">Dermal (11)</button>
+        <button type="button" class="chip" data-filter="route" data-value="oral" aria-pressed="false">Oral (4)</button>
+      </div>
+      <div class="filter-group" role="group" aria-label="Filter by category">
+        <span class="filter-group__label">Category</span>
+        <button type="button" class="chip" data-filter="category" data-value="" aria-pressed="true">All categories</button>
+        <button type="button" class="chip" data-filter="category" data-value="Basic Characterization" aria-pressed="false">Basic Characterization (2)</button>
+        <button type="button" class="chip" data-filter="category" data-value="Data Collection" aria-pressed="false">Data Collection (2)</button>
+        <button type="button" class="chip" data-filter="category" data-value="Environmental Risk / Exposure Assessment" aria-pressed="false">Environmental Risk / Exposure Assessment (1)</button>
+        <button type="button" class="chip" data-filter="category" data-value="Preliminary / Initial Exposure Assessment" aria-pressed="false">Preliminary / Initial Exposure Assessment (6)</button>
+        <button type="button" class="chip" data-filter="category" data-value="Product Exposure Modeling" aria-pressed="false">Product Exposure Modeling (4)</button>
+        <button type="button" class="chip" data-filter="category" data-value="Refined Exposure Assessment" aria-pressed="false">Refined Exposure Assessment (9)</button>
+        <button type="button" class="chip" data-filter="category" data-value="Validating Exposure Assessments" aria-pressed="false">Validating Exposure Assessments (1)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="results-bar">
+    <p id="results-count" role="status" aria-live="polite">Showing all 25 tools</p>
+    <button type="button" id="reset-filters" class="link-button" hidden>Reset all filters</button>
+  </div>
+
+  <div class="table-wrap">
+    <table class="tools-table" id="tools-table">
+      <caption class="visually-hidden">Exposure assessment tools, filterable by type, hazard, exposure route, and assessment category</caption>
+      <thead>
+        <tr>
+          <th scope="col">Tool</th>
+          <th scope="col">What it does</th>
+          <th scope="col">Category</th>
+          <th scope="col">Developer</th>
+          <th scope="col">Output</th>
+        </tr>
+      </thead>
+      <tbody id="tools-body">
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="basic characterization" data-search="basic exposure assessment and sampling spreadsheet basic characterization chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/basic-exposure-assessment-and-sampling-spreadsheet.html">Basic Exposure Assessment and Sampling Spreadsheet</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Basic Characterization</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical|physical" data-route="inhalation|dermal" data-category="preliminary / initial exposure assessment" data-search="cb nanotool 2.0 characterizes the health and exposure aspects of working with nanomaterials and determines the level of risk and controls using control banding principles. lawrence livermore national laboratory (llnl) generates an overall risk level 1-4, and associated recommended engineering controls. indicates whether the current engineering controls (as entered by the user) need to be upgraded. preliminary / initial exposure assessment dermal and inhalation chemical physical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/cb-nanotool-20.html">CB Nanotool 2.0</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Characterizes the health and exposure aspects of working with nanomaterials and determines the level of risk and controls using control banding principles.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Preliminary / Initial Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">Lawrence Livermore National Laboratory (LLNL)</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates an overall Risk Level 1-4, and associated recommended engineering controls. Indicates whether the current engineering controls (as entered by the user) need to be upgraded.</div></td>
+        </tr>
+        <tr data-type="worker exposure|environmental assessment" data-hazard="chemical" data-route="inhalation|dermal" data-category="product exposure modeling" data-search="chemsteer chemsteer generates screening-level estimates for environmental releases of and worker exposures to a chemical manufactured and used in industrial and commercial operations (i.e. workplaces). the tool also contains data and estimation methods to assess chemical use in common industrial/commercial sectors (e.g., automotive refinishing) and chemical functional uses (e.g., tackifier in adhesive). chemsteer does not contain methods for estimating exposures to chemicals to the general public, to consumers, or to other species in the environment. epa twa inhalation (ppm), applied and absorbed dose rate (mg/day), lifetime avg daily dose (mg/kg-day), acute potential dose (mg/kg-day) product exposure modeling dermal and inhalation chemical worker exposure environmental assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/chemsteer.html">ChemSTEER</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">ChemSTEER generates screening-level estimates for environmental releases of and worker exposures to a chemical manufactured and used in industrial and commercial operations (i.e. workplaces). The tool also contains data and estimation methods to assess chemical use in common industrial/commercial sectors (e.g., automotive refinishing) and chemical functional uses (e.g., tackifier in adhesive). ChemSTEER does not contain methods for estimating exposures to chemicals to the general public, to consumers, or to other species in the environment.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Product Exposure Modeling</span></td>
+          <td class="cell-developer" data-label="Developer">EPA</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">TWA inhalation (ppm), applied and absorbed dose rate (mg/day), lifetime avg daily dose (mg/kg-day), Acute potential dose (mg/kg-day)</div></td>
+        </tr>
+        <tr data-type="product assessment|environmental assessment" data-hazard="chemical" data-route="inhalation|dermal|oral" data-category="product exposure modeling" data-search="consexpo web 1.2.0 consexpo is a computer program that enables the estimation and assessment of exposure to substances from consumer products such as paint, cleaning agents and personal care products. the model is developed by the national institute for public health and the environment.
+
+exposure via inhalation, via the skin or by oral intake can be assessed. users choose the most appropriate scenario and fill in exposure parameters such as body weight and exposure duration. the program consists of both screening models and higher tier models for an exposure estimation. national institute for public health and the environment generates estimates of exposure dose to the substance in question as an event dose, daily dose or year average dose. likewise, internal (absorbed) dose can be calculated. provides graphs showing exposure over time based on data provided. model will calculate sensitivity analysis if further data is known and provided. product exposure modeling dermal, inhalation, and oral chemical product assessment environmental assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/consexpo-web-120.html">ConsExpo Web 1.2.0</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span><span class="badge badge--route">Oral</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">ConsExpo is a computer program that enables the estimation and assessment of exposure to substances from consumer products such as paint, cleaning agents and personal care products. The model is developed by the National Institute for Public Health and the Environment.
+
+Exposure via inhalation, via the skin or by oral intake can be assessed. Users choose the most appropriate scenario and fill in exposure parameters such as body weight and exposure duration. The program consists of both screening models and higher tier models for an exposure estimation.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Product Exposure Modeling</span></td>
+          <td class="cell-developer" data-label="Developer">National Institute for Public Health and the Environment</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates estimates of exposure dose to the substance in question as an event dose, daily dose or year average dose. Likewise, internal (absorbed) dose can be calculated. Provides graphs showing exposure over time based on data provided. Model will calculate sensitivity analysis if further data is known and provided.</div></td>
+        </tr>
+        <tr data-type="product assessment" data-hazard="chemical" data-route="inhalation|dermal|oral" data-category="product exposure modeling" data-search="consumer exposure model (cem) version 3.2 assesses indoor (or outdoor) exposure to emissions or releases from consumer products and articles. allows users to enter scenario-specific inputs, or chooser from default exposure scenarios. usepa - office of pollution prevention and toxics generates a formatted report with chronic (ladd, ladc), acute (adr), and peak concentration estimates. product exposure modeling dermal, inhalation and oral chemical product assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/consumer-exposure-model-cem-version-32.html">Consumer Exposure Model (CEM) Version 3.2</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span><span class="badge badge--route">Oral</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Assesses indoor (or outdoor) exposure to emissions or releases from consumer products and articles. Allows users to enter scenario-specific inputs, or chooser from default exposure scenarios.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Product Exposure Modeling</span></td>
+          <td class="cell-developer" data-label="Developer">USEPA - Office of Pollution Prevention and Toxics</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates a formatted report with chronic (LADD, LADC), acute (ADR), and peak concentration estimates.</div></td>
+        </tr>
+        <tr data-type="worker exposure|product assessment" data-hazard="chemical" data-route="dermal" data-category="refined exposure assessment" data-search="dram v1.0 provides a systematic screenting evalution of the relative reisks of dermal exposure to a material. it is especially useful for the purposes of prioritization. aiha color coded risk matrix - low, medium, high, very high refined exposure assessment dermal chemical worker exposure product assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/dram-v10.html">DRAM v1.0</a>
+            <div class="meta-line"><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Provides a systematic screenting evalution of the relative reisks of dermal exposure to a material. It is especially useful for the purposes of prioritization.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">AIHA</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Color coded risk matrix - Low, medium, high, very high</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="inhalation|dermal" data-category="refined exposure assessment" data-search="ecetoc targeted risk assessment (tra) v3.2 - integrated tool offers a tiered approach for calculating the likely exposure and subsequent risks to workers resulting from defined uses of chemicals. calculates an rcr (risk characterization ratio) for input scenarios. it is a screening level exposure and risk assessment tool. european center for ecotoxicology and toxicology of chemicals (ecetoc) generates airborne concentrations and external dermal exposure, along with a risk characterization ratio refined exposure assessment dermal and inhalation chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/ecetoc-targeted-risk-assessment-tra-v32-integrated-tool.html">ECETOC Targeted Risk Assessment (TRA) v3.2 - Integrated Tool</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Offers a tiered approach for calculating the likely exposure and subsequent risks to workers resulting from defined uses of chemicals. Calculates an RCR (risk characterization ratio) for input scenarios. It is a screening level exposure and risk assessment tool.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">European Center for Ecotoxicology and Toxicology of Chemicals (ECETOC)</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates airborne concentrations and external dermal exposure, along with a risk characterization ratio</div></td>
+        </tr>
+        <tr data-type="product assessment" data-hazard="chemical" data-route="inhalation|dermal" data-category="product exposure modeling" data-search="ecetoc targeted risk assessment (tra) v3.2 - standalone consumer tool offers a tiered approach for calculating the likely exposure and subsequent risks to consumers resulting from defined uses of chemicals. calculates an rcr (risk characterization ratio) for input scenarios. it is a screening level exposure and risk assessment tool. european center for ecotoxicology and toxicology of chemicals (ecetoc) generates airborne concentrations and external dermal exposure, along with a risk characterization ratio product exposure modeling dermal and inhalation chemical product assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/ecetoc-targeted-risk-assessment-tra-v32-standalone-consumer-tool.html">ECETOC Targeted Risk Assessment (TRA) v3.2 - Standalone Consumer Tool</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Offers a tiered approach for calculating the likely exposure and subsequent risks to consumers resulting from defined uses of chemicals. Calculates an RCR (risk characterization ratio) for input scenarios. It is a screening level exposure and risk assessment tool.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Product Exposure Modeling</span></td>
+          <td class="cell-developer" data-label="Developer">European Center for Ecotoxicology and Toxicology of Chemicals (ECETOC)</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates airborne concentrations and external dermal exposure, along with a risk characterization ratio</div></td>
+        </tr>
+        <tr data-type="worker exposure|product assessment" data-hazard="chemical" data-route="inhalation|dermal|oral" data-category="environmental risk / exposure assessment" data-search="exposure and safety estimation (eas-e suite), risk assessment identification and ranking - indoor and consumer exposure (raidar-ice) combines indoor fate and toxicokinetic 
+mass balance models to simulate human 
+exposure from chemicals used indoors 
+and/or direct applications (e.g., dermal) arnot research raidar-ice provides estimates of concentrations in the indoor environment; that is, air concentration and concentration of the chemical on other media. in addition, it provided exposure rates, human external and internal estimates and risk estimates for a given threshold valute. environmental risk / exposure assessment dermal, inhalation, and oral chemical worker exposure product assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/exposure-and-safety-estimation-eas-e-suite-risk-assessment-identification-and-ranking-indoor-and-consumer-exposure-raidar-ice.html">Exposure and Safety Estimation (EAS-E Suite), Risk Assessment IDentification And Ranking - Indoor and Consumer Exposure (RAIDAR-ICE)</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span><span class="badge badge--route">Oral</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Combines indoor fate and toxicokinetic 
+mass balance models to simulate human 
+exposure from chemicals used indoors 
+and/or direct applications (e.g., dermal)</div></td>
+          <td data-label="Category"><span class="badge badge--category">Environmental Risk / Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">Arnot Research</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">RAIDAR-ICE provides estimates of concentrations in the indoor environment; that is, air concentration and concentration of the chemical on other media. In addition, it provided exposure rates, human external and internal estimates and risk estimates for a given threshold valute.</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="refined exposure assessment" data-search="frc assessment tool refined exposure assessment chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/frc-assessment-tool.html">FRC Assessment Tool</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="data collection" data-search="ih hazards by market segment data collection chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/ih-hazards-by-market-segment.html">IH Hazards by Market Segment</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Data Collection</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure|product assessment" data-hazard="chemical" data-route="dermal" data-category="refined exposure assessment" data-search="ih skinperm estimates the permeability of chemicals across skin barrier. data for over 100 substances exist in the model&#x27;s database. the model offers four types of dermal absorption scenarios. results are given in both tabular and graphical formats. aiha&#x27;s exposure assessment strategies committee (easc) and the dermal project team (dpt) in collaboration with wil ten berge generates a report providing total deposition (mg), fraction absorbed (%), and amount absorbed (mg), as well as a graph that displays the fraction absorbed, the fraction that volatizes to air, and the fraction in the stratum corneum. refined exposure assessment dermal chemical worker exposure product assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/ih-skinperm.html">IH SKINPERM</a>
+            <div class="meta-line"><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Estimates the permeability of chemicals across skin barrier. Data for over 100 substances exist in the model&#x27;s database. The model offers four types of dermal absorption scenarios. Results are given in both tabular and graphical formats.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">AIHA&#x27;s Exposure Assessment Strategies Committee (EASC) and the Dermal Project Team (DPT) in collaboration with Wil ten Berge</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates a report providing total deposition (mg), fraction absorbed (%), and amount absorbed (mg), as well as a graph that displays the fraction absorbed, the fraction that volatizes to air, and the fraction in the stratum corneum.</div></td>
+        </tr>
+        <tr data-type="worker exposure|product assessment" data-hazard="chemical" data-route="inhalation" data-category="refined exposure assessment" data-search="ih-mod 2.0 estimates inhalation exposure to chemicals and the resulting acute health risks for working scenarios characterized by successive peaks of pollutant concentrations from time-varying emissions to air.
+
+includes 2-d monte carlo analysis. aiha&#x27;s exposure assessment strategies committee (easc) generates modeled concentrations in air (including twa concentration) compared with oels (tlv, rel). produces a graph of concentration vs. time and indicates the time at which predicted maximum concentration occurs. refined exposure assessment inhalation chemical worker exposure product assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/ih-mod-20.html">IH-MOD 2.0</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Estimates inhalation exposure to chemicals and the resulting acute health risks for working scenarios characterized by successive peaks of pollutant concentrations from time-varying emissions to air.
+
+Includes 2-D Monte Carlo analysis.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">AIHA&#x27;s Exposure Assessment Strategies Committee (EASC)</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates modeled concentrations in air (including TWA concentration) compared with OELs (TLV, REL). Produces a graph of concentration vs. time and indicates the time at which predicted maximum concentration occurs.</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="data collection" data-search="ih/oehs exposure scenario tool (ihest)™ data collection chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/ihoehs-exposure-scenario-tool-ihest.html">IH/OEHS Exposure Scenario Tool (IHEST)™</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Data Collection</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical|physical" data-route="inhalation" data-category="preliminary / initial exposure assessment" data-search="nanosafer determines a control band for airborne occupation exposure based on the hazards of nano materials and the processes being used. national research center for the working environment, denmark generates a report showing the control band and protection factor. preliminary / initial exposure assessment inhalation chemical physical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/nanosafer.html">NanoSafer</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Determines a control band for airborne occupation exposure based on the hazards of nano materials and the processes being used.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Preliminary / Initial Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">National Research Center for the Working Environment, Denmark</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates a report showing the control band and protection factor.</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="basic characterization" data-search="npt-odt estimator basic characterization chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/npt-odt-estimator.html">NPT-ODT Estimator</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Basic Characterization</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="inhalation" data-category="refined exposure assessment" data-search="odhmod odhmod™ is an excel-based modeling tool designed to estimate oxygen concentration trends in environments where inert gas releases may create oxygen deficiency hazards (odh). the tool applies a near field-far-field (nf-ff) modeling approach to simulate the temporal evolution of oxygen concentration in two zones. it provides results as oxygen concentration (% by volume) and oxygen partial pressure (mmhg). these outputs help evaluate potential asphyxiation risks, estimate time to reach critical oxygen thresholds, and support decisions on hazard mitigation and controls. aiha in collaboration with università degli studi di brescia oxygen concentration (% by volume) and oxygen partial pressure (mmhg) over time in the near field and far field, supporting estimates of time to reach critical oxygen thresholds. refined exposure assessment inhalation (oxygen deficiency / displacement of breathable air) chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/odhmod.html">ODHMOD</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">ODHMOD™ is an Excel-based modeling tool designed to estimate oxygen concentration trends in environments where inert gas releases may create Oxygen Deficiency Hazards (ODH). The tool applies a Near Field-Far-Field (NF-FF) modeling approach to simulate the temporal evolution of oxygen concentration in two zones. It provides results as oxygen concentration (% by volume) and oxygen partial pressure (mmHg). These outputs help evaluate potential asphyxiation risks, estimate time to reach critical oxygen thresholds, and support decisions on hazard mitigation and controls.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">AIHA in collaboration with Università degli Studi di Brescia</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Oxygen concentration (% by volume) and oxygen partial pressure (mmHg) over time in the near field and far field, supporting estimates of time to reach critical oxygen thresholds.</div></td>
+        </tr>
+        <tr data-type="worker exposure|product assessment|environmental assessment" data-hazard="chemical|physical" data-route="inhalation|dermal|oral" data-category="preliminary / initial exposure assessment" data-search="precautionary matrix for synthetic nanomaterials assesses the nano-specific health and environmental risks of nanoproducts. guides user to determine whether production or application requires nano-specific control measures. 
+
+allows for preliminary risk assessment based on the current state of knowledge, and indicates when further clarification is needed. federal office of public health, switzerland generates a classification category, a or b, which establishes the precautionary need. category a (score of less than 25) suggests the need for further action is low. category b (score of greater than 25) suggests that nano-specific action is needed. preliminary / initial exposure assessment dermal, inhalation, and oral chemical physical worker exposure product assessment environmental assessment">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/precautionary-matrix-for-synthetic-nanomaterials.html">Precautionary Matrix for Synthetic Nanomaterials</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span><span class="badge badge--route">Oral</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Assesses the nano-specific health and environmental risks of nanoproducts. Guides user to determine whether production or application requires nano-specific control measures. 
+
+Allows for preliminary risk assessment based on the current state of knowledge, and indicates when further clarification is needed.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Preliminary / Initial Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">Federal Office of Public Health, Switzerland</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates a classification category, A or B, which establishes the precautionary need. Category A (score of less than 25) suggests the need for further action is low. Category B (score of greater than 25) suggests that nano-specific action is needed.</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="physical" data-route="" data-category="refined exposure assessment" data-search="rf exposure assessment tool refined exposure assessment physical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/rf-exposure-assessment-tool.html">RF Exposure Assessment Tool</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="validating exposure assessments" data-search="sample strategies industrial hygiene modeler (sihm) validating exposure assessments chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/sample-strategies-industrial-hygiene-modeler-sihm.html">Sample Strategies Industrial Hygiene Modeler (SIHM)</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Validating Exposure Assessments</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="inhalation" data-category="preliminary / initial exposure assessment" data-search="sdm 2.0 (structured deterministic model) sdm 2.0 generates estimates of airborne concentrations that represent potential occupational inhalation exposure to volatile and semi-volatile chemicals and chemical mixtures, aerosols, particulates, and fibers. for gases and vapors, it provides a point estimate of the 95th percentile value of an exposure distribution that can be compared to an occupational exposure limit and allows users to evaluate the impact of different exposure control options on exposure and health risk. this tool builds upon the previously developed &quot;checklist tool.&quot; university of minnesota for gases and vapors:
+- point estimate of the 95th percentile airborne concentration value of an exposure distribution, for each level of ventilation control
+ - exposure control category, for each level of ventilation control
+
+for aerosols, particulates, and fibers:
+ - predicted exposure control category preliminary / initial exposure assessment inhalation chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/sdm-20-structured-deterministic-model.html">SDM 2.0 (Structured Deterministic Model)</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">SDM 2.0 generates estimates of airborne concentrations that represent potential occupational inhalation exposure to volatile and semi-volatile chemicals and chemical mixtures, aerosols, particulates, and fibers. For gases and vapors, it provides a point estimate of the 95th percentile value of an exposure distribution that can be compared to an occupational exposure limit and allows users to evaluate the impact of different exposure control options on exposure and health risk. This tool builds upon the previously developed &quot;Checklist Tool.&quot;</div></td>
+          <td data-label="Category"><span class="badge badge--category">Preliminary / Initial Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">University of Minnesota</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">For gases and vapors:
+- Point estimate of the 95th percentile airborne concentration value of an exposure distribution, for each level of ventilation control
+ - Exposure control category, for each level of ventilation control
+
+For aerosols, particulates, and fibers:
+ - predicted Exposure Control Category</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="inhalation|dermal" data-category="preliminary / initial exposure assessment" data-search="stoffenmanager 8.2 stoffenmanager 8.2 is a software solution designed for managing hazardous substances, with a focus on occupational exposure and risk assessment. cosanta b.v. inhalation (quantitative): a task concentration and a daily average concentration in mg/m3 per component in the product (powders/wood dust: total inhalable, stone dust: inhalable and respirable) preliminary / initial exposure assessment inhalation and dermal chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/stoffenmanager-82.html">Stoffenmanager 8.2</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span><span class="badge badge--route">Dermal</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Stoffenmanager 8.2 is a software solution designed for managing hazardous substances, with a focus on occupational exposure and risk assessment.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Preliminary / Initial Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">Cosanta B.V.</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Inhalation (quantitative): a task concentration and a daily average concentration in mg/m3 per component in the product (powders/wood dust: total inhalable, stone dust: inhalable and respirable)</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical|physical" data-route="inhalation" data-category="preliminary / initial exposure assessment" data-search="stoffenmanager nano - module 1.0 qualitatively assesses occupational health risks from enps so that inhalation health risks can be prioritized. cosanta b.v. generates a table of hazard and exposure classes along with a risk score. unique scores are calculated for time weighted and task weighted assessments. preliminary / initial exposure assessment inhalation chemical physical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/stoffenmanager-nano-module-10.html">Stoffenmanager Nano - module 1.0</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Qualitatively assesses occupational health risks from ENPs so that inhalation health risks can be prioritized.</div></td>
+          <td data-label="Category"><span class="badge badge--category">Preliminary / Initial Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">Cosanta B.V.</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates a table of hazard and exposure classes along with a risk score. Unique scores are calculated for time weighted and task weighted assessments.</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="inhalation" data-category="refined exposure assessment" data-search="the advanced reach tool v2.0 estimates worker inhalation exposure to chemicals based on a mechanistic model with an option of a bayesian analysis. the user can refine the exposure assessment using measurements from a built-in exposure assessment database, or from user data.
+the model hosts a library of 117 exposure scenarios that include 1,944 measurements tno generates an exposure estimate in mg/m3 at a selected percentile and confidence interval. users can add bayesian treatment to the data by either uploading their own monitoring data, or selecting analogous scenarios, in which case monitoring data affiliated with those scenarios will be used. both the mechanistic and bayesian results are displayed. report can be downloaded in pdf or excel. refined exposure assessment inhalation chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/the-advanced-reach-tool-v20.html">The Advanced REACH Tool v2.0</a>
+            <div class="meta-line"><span class="badge badge--route">Inhalation</span></div>
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp">Estimates worker inhalation exposure to chemicals based on a mechanistic model with an option of a Bayesian analysis. The user can refine the exposure assessment using measurements from a built-in exposure assessment database, or from user data.
+The model hosts a library of 117 exposure scenarios that include 1,944 measurements</div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer">TNO</td>
+          <td class="cell-output" data-label="Output"><div class="clamp">Generates an exposure estimate in mg/m3 at a selected percentile and confidence interval. Users can add Bayesian treatment to the data by either uploading their own monitoring data, or selecting analogous scenarios, in which case monitoring data affiliated with those scenarios will be used. Both the mechanistic and Bayesian results are displayed. Report can be downloaded in pdf or excel.</div></td>
+        </tr>
+        <tr data-type="worker exposure" data-hazard="chemical" data-route="" data-category="refined exposure assessment" data-search="unifac calculator refined exposure assessment chemical worker exposure">
+          <td class="cell-name" data-label="Tool">
+            <a href="tools/unifac-calculator.html">UNIFAC Calculator</a>
+            
+          </td>
+          <td class="cell-desc" data-label="What it does"><div class="clamp"><span class="pending">Write-up in progress</span></div></td>
+          <td data-label="Category"><span class="badge badge--category">Refined Exposure Assessment</span></td>
+          <td class="cell-developer" data-label="Developer"><span class="pending">Not documented yet</span></td>
+          <td class="cell-output" data-label="Output"><div class="clamp"><span class="pending">Not documented yet</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="empty-state" id="empty-state" hidden>
+    <h3>No tools match those filters</h3>
+    <p>Try removing a filter or searching for a broader term.</p>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>&copy; 2025 AIHA Industrial Hygienist Toolbox &middot; For educational and professional use.</p>
+    <nav aria-label="Footer">
+      <a href="index.html">Assessment Tools</a>
+      <a href="documentation.html">Supporting Documentation</a>
+      <a href="https://www.aiha.org/" target="_blank" rel="noopener noreferrer">AIHA.org</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/js/directory.js" defer></script>
+</body>
+</html>

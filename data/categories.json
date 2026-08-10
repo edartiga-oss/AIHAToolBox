@@ -1,0 +1,9 @@
+{
+  "Data Collection": "Tools that help structure and organise exposure data gathering. Typically used at the very start of an assessment, before any modelling.",
+  "Basic Characterization": "Simple instruments for initial hazard and exposure characterisation, useful for screening and prioritisation.",
+  "Preliminary / Initial Exposure Assessment": "Qualitative or semi-quantitative tools that produce a first estimate of exposure, often through control banding or a tiered scoring approach.",
+  "Refined Exposure Assessment": "Quantitative models that produce scenario-specific exposure estimates, sometimes including probabilistic or Bayesian treatment of uncertainty.",
+  "Validating Exposure Assessments": "Tools used to test or confirm an exposure assessment against measurement data or an alternative method.",
+  "Product Exposure Modeling": "Models built for consumer product scenarios, accounting for formulation, use pattern, frequency, and consumer behaviour.",
+  "Environmental Risk / Exposure Assessment": "Tools focused on environmental release, indoor and outdoor fate and transport, and community or ecosystem exposure."
+}

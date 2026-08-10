@@ -1,0 +1,461 @@
+[
+  {
+    "name": "CB Nanotool 2.0",
+    "slug": "cb-nanotool-20",
+    "urls": [
+      "https://controlbanding.llnl.gov/download"
+    ],
+    "description": "Characterizes the health and exposure aspects of working with nanomaterials and determines the level of risk and controls using control banding principles.",
+    "exposure_routes": "Dermal and inhalation",
+    "agency": "Lawrence Livermore National Laboratory (LLNL)",
+    "output": "Generates an overall Risk Level 1-4, and associated recommended engineering controls. Indicates whether the current engineering controls (as entered by the user) need to be upgraded.",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical",
+      "Physical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "Precautionary Matrix for Synthetic Nanomaterials",
+    "slug": "precautionary-matrix-for-synthetic-nanomaterials",
+    "urls": [
+      "https://www.bag.admin.ch/bag/en/home/gesund-leben/umwelt-und-gesundheit/chemikalien/nanotechnologie/sicherer-umgang-mit-nanomaterialien/vorsorgeraster-nanomaterialien-webanwendung.html"
+    ],
+    "description": "Assesses the nano-specific health and environmental risks of nanoproducts. Guides user to determine whether production or application requires nano-specific control measures. \n\nAllows for preliminary risk assessment based on the current state of knowledge, and indicates when further clarification is needed.",
+    "exposure_routes": "Dermal, inhalation, and oral",
+    "agency": "Federal Office of Public Health, Switzerland",
+    "output": "Generates a classification category, A or B, which establishes the precautionary need. Category A (score of less than 25) suggests the need for further action is low. Category B (score of greater than 25) suggests that nano-specific action is needed.",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical",
+      "Physical"
+    ],
+    "tool_type": [
+      "Worker Exposure",
+      "Product Assessment",
+      "Environmental Assessment"
+    ]
+  },
+  {
+    "name": "Stoffenmanager Nano - module 1.0",
+    "slug": "stoffenmanager-nano-module-10",
+    "urls": [
+      "https://nano.stoffenmanager.nl/"
+    ],
+    "description": "Qualitatively assesses occupational health risks from ENPs so that inhalation health risks can be prioritized.",
+    "exposure_routes": "Inhalation",
+    "agency": "Cosanta B.V.",
+    "output": "Generates a table of hazard and exposure classes along with a risk score. Unique scores are calculated for time weighted and task weighted assessments.",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical",
+      "Physical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "Stoffenmanager 8.2",
+    "slug": "stoffenmanager-82",
+    "urls": [
+      "https://stoffenmanager.com/"
+    ],
+    "description": "Stoffenmanager 8.2 is a software solution designed for managing hazardous substances, with a focus on occupational exposure and risk assessment.",
+    "exposure_routes": "Inhalation and dermal",
+    "agency": "Cosanta B.V.",
+    "output": "Inhalation (quantitative): a task concentration and a daily average concentration in mg/m3 per component in the product (powders/wood dust: total inhalable, stone dust: inhalable and respirable)",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "NanoSafer",
+    "slug": "nanosafer",
+    "urls": [
+      "http://www.nanosafer.org/"
+    ],
+    "description": "Determines a control band for airborne occupation exposure based on the hazards of nano materials and the processes being used.",
+    "exposure_routes": "Inhalation",
+    "agency": "National Research Center for the Working Environment, Denmark",
+    "output": "Generates a report showing the control band and protection factor.",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical",
+      "Physical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "IH-MOD 2.0",
+    "slug": "ih-mod-20",
+    "urls": [
+      "https://www.aiha.org/public-resources/healthierworkplaces/healthier-community-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/ihmod-tool"
+    ],
+    "description": "Estimates inhalation exposure to chemicals and the resulting acute health risks for working scenarios characterized by successive peaks of pollutant concentrations from time-varying emissions to air.\n\nIncludes 2-D Monte Carlo analysis.",
+    "exposure_routes": "Inhalation",
+    "agency": "AIHA's Exposure Assessment Strategies Committee (EASC)",
+    "output": "Generates modeled concentrations in air (including TWA concentration) compared with OELs (TLV, REL). Produces a graph of concentration vs. time and indicates the time at which predicted maximum concentration occurs.",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure",
+      "Product Assessment"
+    ]
+  },
+  {
+    "name": "ECETOC Targeted Risk Assessment (TRA) v3.2 - Integrated Tool",
+    "slug": "ecetoc-targeted-risk-assessment-tra-v32-integrated-tool",
+    "urls": [
+      "https://www.ecetoc.org/tools/tra-main/tra-download/"
+    ],
+    "description": "Offers a tiered approach for calculating the likely exposure and subsequent risks to workers resulting from defined uses of chemicals. Calculates an RCR (risk characterization ratio) for input scenarios. It is a screening level exposure and risk assessment tool.",
+    "exposure_routes": "Dermal and inhalation",
+    "agency": "European Center for Ecotoxicology and Toxicology of Chemicals (ECETOC)",
+    "output": "Generates airborne concentrations and external dermal exposure, along with a risk characterization ratio",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "ECETOC Targeted Risk Assessment (TRA) v3.2 - Standalone Consumer Tool",
+    "slug": "ecetoc-targeted-risk-assessment-tra-v32-standalone-consumer-tool",
+    "urls": [
+      "https://www.ecetoc.org/tools/tra-main/tra-download/"
+    ],
+    "description": "Offers a tiered approach for calculating the likely exposure and subsequent risks to consumers resulting from defined uses of chemicals. Calculates an RCR (risk characterization ratio) for input scenarios. It is a screening level exposure and risk assessment tool.",
+    "exposure_routes": "Dermal and inhalation",
+    "agency": "European Center for Ecotoxicology and Toxicology of Chemicals (ECETOC)",
+    "output": "Generates airborne concentrations and external dermal exposure, along with a risk characterization ratio",
+    "category": "Product Exposure Modeling",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Product Assessment"
+    ]
+  },
+  {
+    "name": "IH SKINPERM",
+    "slug": "ih-skinperm",
+    "urls": [
+      "https://www.aiha.org/public-resources/consumer-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/ihskinperm"
+    ],
+    "description": "Estimates the permeability of chemicals across skin barrier. Data for over 100 substances exist in the model's database. The model offers four types of dermal absorption scenarios. Results are given in both tabular and graphical formats.",
+    "exposure_routes": "Dermal",
+    "agency": "AIHA's Exposure Assessment Strategies Committee (EASC) and the Dermal Project Team (DPT) in collaboration with Wil ten Berge",
+    "output": "Generates a report providing total deposition (mg), fraction absorbed (%), and amount absorbed (mg), as well as a graph that displays the fraction absorbed, the fraction that volatizes to air, and the fraction in the stratum corneum.",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure",
+      "Product Assessment"
+    ]
+  },
+  {
+    "name": "The Advanced REACH Tool v2.0",
+    "slug": "the-advanced-reach-tool-v20",
+    "urls": [
+      "https://www.advancedreachtool.com/"
+    ],
+    "description": "Estimates worker inhalation exposure to chemicals based on a mechanistic model with an option of a Bayesian analysis. The user can refine the exposure assessment using measurements from a built-in exposure assessment database, or from user data.\nThe model hosts a library of 117 exposure scenarios that include 1,944 measurements",
+    "exposure_routes": "Inhalation",
+    "agency": "TNO",
+    "output": "Generates an exposure estimate in mg/m3 at a selected percentile and confidence interval. Users can add Bayesian treatment to the data by either uploading their own monitoring data, or selecting analogous scenarios, in which case monitoring data affiliated with those scenarios will be used. Both the mechanistic and Bayesian results are displayed. Report can be downloaded in pdf or excel.",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "ConsExpo Web 1.2.0",
+    "slug": "consexpo-web-120",
+    "urls": [
+      "https://www.rivm.nl/en/Topics/C/ConsExpo",
+      "https://www.rivm.nl/en/consexpo/consexpoweb",
+      "https://consexpoweb.nl/"
+    ],
+    "description": "ConsExpo is a computer program that enables the estimation and assessment of exposure to substances from consumer products such as paint, cleaning agents and personal care products. The model is developed by the National Institute for Public Health and the Environment.\n\nExposure via inhalation, via the skin or by oral intake can be assessed. Users choose the most appropriate scenario and fill in exposure parameters such as body weight and exposure duration. The program consists of both screening models and higher tier models for an exposure estimation.",
+    "exposure_routes": "Dermal, inhalation, and oral",
+    "agency": "National Institute for Public Health and the Environment",
+    "output": "Generates estimates of exposure dose to the substance in question as an event dose, daily dose or year average dose. Likewise, internal (absorbed) dose can be calculated. Provides graphs showing exposure over time based on data provided. Model will calculate sensitivity analysis if further data is known and provided.",
+    "category": "Product Exposure Modeling",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Product Assessment",
+      "Environmental Assessment"
+    ]
+  },
+  {
+    "name": "Consumer Exposure Model (CEM) Version 3.2",
+    "slug": "consumer-exposure-model-cem-version-32",
+    "urls": [
+      "https://www.epa.gov/tsca-screening-tools/e-fast-exposure-and-fate-assessment-screening-tool-version-2014",
+      "https://www.epa.gov/tsca-screening-tools/approaches-estimate-consumer-exposure-under-tsca#consumer"
+    ],
+    "description": "Assesses indoor (or outdoor) exposure to emissions or releases from consumer products and articles. Allows users to enter scenario-specific inputs, or chooser from default exposure scenarios.",
+    "exposure_routes": "Dermal, inhalation and oral",
+    "agency": "USEPA - Office of Pollution Prevention and Toxics",
+    "output": "Generates a formatted report with chronic (LADD, LADC), acute (ADR), and peak concentration estimates.",
+    "category": "Product Exposure Modeling",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Product Assessment"
+    ]
+  },
+  {
+    "name": "Exposure and Safety Estimation (EAS-E Suite), Risk Assessment IDentification And Ranking - Indoor and Consumer Exposure (RAIDAR-ICE)",
+    "slug": "exposure-and-safety-estimation-eas-e-suite-risk-assessment-identification-and-ranking-indoor-and-consumer-exposure-raidar-ice",
+    "urls": [
+      "https://arnotresearch.com/eas-e-suite/"
+    ],
+    "description": "Combines indoor fate and toxicokinetic \nmass balance models to simulate human \nexposure from chemicals used indoors \nand/or direct applications (e.g., dermal)",
+    "exposure_routes": "Dermal, inhalation, and oral",
+    "agency": "Arnot Research",
+    "output": "RAIDAR-ICE provides estimates of concentrations in the indoor environment; that is, air concentration and concentration of the chemical on other media. In addition, it provided exposure rates, human external and internal estimates and risk estimates for a given threshold valute.",
+    "category": "Environmental Risk / Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure",
+      "Product Assessment"
+    ]
+  },
+  {
+    "name": "ChemSTEER",
+    "slug": "chemsteer",
+    "urls": [
+      "https://www.epa.gov/tsca-screening-tools/chemsteer-chemical-screening-tool-exposures-and-environmental-releases"
+    ],
+    "description": "ChemSTEER generates screening-level estimates for environmental releases of and worker exposures to a chemical manufactured and used in industrial and commercial operations (i.e. workplaces). The tool also contains data and estimation methods to assess chemical use in common industrial/commercial sectors (e.g., automotive refinishing) and chemical functional uses (e.g., tackifier in adhesive). ChemSTEER does not contain methods for estimating exposures to chemicals to the general public, to consumers, or to other species in the environment.",
+    "exposure_routes": "Dermal and inhalation",
+    "agency": "EPA",
+    "output": "TWA inhalation (ppm), applied and absorbed dose rate (mg/day), lifetime avg daily dose (mg/kg-day), Acute potential dose (mg/kg-day)",
+    "category": "Product Exposure Modeling",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure",
+      "Environmental Assessment"
+    ]
+  },
+  {
+    "name": "SDM 2.0 (Structured Deterministic Model)",
+    "slug": "sdm-20-structured-deterministic-model",
+    "urls": [
+      "https://license.umn.edu/product/structured-deterministic-model-sdm-20"
+    ],
+    "description": "SDM 2.0 generates estimates of airborne concentrations that represent potential occupational inhalation exposure to volatile and semi-volatile chemicals and chemical mixtures, aerosols, particulates, and fibers. For gases and vapors, it provides a point estimate of the 95th percentile value of an exposure distribution that can be compared to an occupational exposure limit and allows users to evaluate the impact of different exposure control options on exposure and health risk. This tool builds upon the previously developed \"Checklist Tool.\"",
+    "exposure_routes": "Inhalation",
+    "agency": "University of Minnesota",
+    "output": "For gases and vapors:\n- Point estimate of the 95th percentile airborne concentration value of an exposure distribution, for each level of ventilation control\n - Exposure control category, for each level of ventilation control\n\nFor aerosols, particulates, and fibers:\n - predicted Exposure Control Category",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "DRAM v1.0",
+    "slug": "dram-v10",
+    "urls": [
+      "https://www.aiha.org/public-resources/healthierworkplaces/healthier-community-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/dermal-risk-assessment-model"
+    ],
+    "description": "Provides a systematic screenting evalution of the relative reisks of dermal exposure to a material. It is especially useful for the purposes of prioritization.",
+    "exposure_routes": "Dermal",
+    "agency": "AIHA",
+    "output": "Color coded risk matrix - Low, medium, high, very high",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure",
+      "Product Assessment"
+    ]
+  },
+  {
+    "name": "ODHMOD",
+    "slug": "odhmod",
+    "urls": [
+      "https://www.aiha.org/public-resources/healthierworkplaces/healthier-community-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/ohdmod"
+    ],
+    "description": "ODHMOD™ is an Excel-based modeling tool designed to estimate oxygen concentration trends in environments where inert gas releases may create Oxygen Deficiency Hazards (ODH). The tool applies a Near Field-Far-Field (NF-FF) modeling approach to simulate the temporal evolution of oxygen concentration in two zones. It provides results as oxygen concentration (% by volume) and oxygen partial pressure (mmHg). These outputs help evaluate potential asphyxiation risks, estimate time to reach critical oxygen thresholds, and support decisions on hazard mitigation and controls.",
+    "exposure_routes": "Inhalation (oxygen deficiency / displacement of breathable air)",
+    "agency": "AIHA in collaboration with Università degli Studi di Brescia",
+    "output": "Oxygen concentration (% by volume) and oxygen partial pressure (mmHg) over time in the near field and far field, supporting estimates of time to reach critical oxygen thresholds.",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "FRC Assessment Tool",
+    "slug": "frc-assessment-tool",
+    "urls": [],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "RF Exposure Assessment Tool",
+    "slug": "rf-exposure-assessment-tool",
+    "urls": [],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Physical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "UNIFAC Calculator",
+    "slug": "unifac-calculator",
+    "urls": [
+      "https://aiha-assets.sfo2.digitaloceanspaces.com/AIHA/resources/Public-Resources/unifacal.zip"
+    ],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Refined Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "Sample Strategies Industrial Hygiene Modeler (SIHM)",
+    "slug": "sample-strategies-industrial-hygiene-modeler-sihm",
+    "urls": [
+      "https://mikeyjjih.shinyapps.io/SIHM_Basic_Biased_Percent_Bayesian_Multiplier/"
+    ],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Validating Exposure Assessments",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "Basic Exposure Assessment and Sampling Spreadsheet",
+    "slug": "basic-exposure-assessment-and-sampling-spreadsheet",
+    "urls": [
+      "https://www.aiha.org/public-resources/healthierworkplaces/healthier-community-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/basic-exposure-assessment-and-sampling-spreadsheet"
+    ],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Basic Characterization",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "NPT-ODT Estimator",
+    "slug": "npt-odt-estimator",
+    "urls": [
+      "https://aiha-assets.sfo2.digitaloceanspaces.com/AIHA/resources/Odor_Detection_Irritation_Estimation.xlsx"
+    ],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Basic Characterization",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "IH Hazards by Market Segment",
+    "slug": "ih-hazards-by-market-segment",
+    "urls": [],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Data Collection",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "IH/OEHS Exposure Scenario Tool (IHEST)™",
+    "slug": "ihoehs-exposure-scenario-tool-ihest",
+    "urls": [
+      "https://www.aiha.org/public-resources/healthierworkplaces/healthier-community-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/ih-oehs-exposure-scenario-tool-ihest"
+    ],
+    "description": "",
+    "exposure_routes": "",
+    "agency": "",
+    "output": "",
+    "category": "Data Collection",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  }
+]
