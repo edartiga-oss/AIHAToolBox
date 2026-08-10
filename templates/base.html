@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIHA Industrial Hygienist Toolbox">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#002855">
+<link rel="icon" href="{{BASE}}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{BASE}}assets/css/site.css">
+{{HEAD_EXTRA}}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="{{BASE}}index.html">
+      <span class="brand__mark" aria-hidden="true">IH</span>
+      <span class="brand__text">
+        <small>AIHA</small>
+        Industrial Hygienist Toolbox
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="{{BASE}}index.html"{{NAV_TOOLS}}>Assessment Tools</a>
+      <a href="{{BASE}}documentation.html"{{NAV_DOCS}}>Supporting Documentation</a>
+    </nav>
+  </div>
+</header>
+
+{{HERO}}
+
+<main id="main">
+{{MAIN}}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>&copy; {{YEAR}} AIHA Industrial Hygienist Toolbox &middot; For educational and professional use.</p>
+    <nav aria-label="Footer">
+      <a href="{{BASE}}index.html">Assessment Tools</a>
+      <a href="{{BASE}}documentation.html">Supporting Documentation</a>
+      <a href="https://www.aiha.org/" target="_blank" rel="noopener noreferrer">AIHA.org</a>
+    </nav>
+  </div>
+</footer>
+{{SCRIPTS}}
+</body>
+</html>
