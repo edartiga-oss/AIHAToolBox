@@ -11,6 +11,8 @@
   --red: #e63946;
   --red-dark: #c92b38;
   --teal: #00a58e;
+  --blue: #2563eb;          /* active filter accent — AA-contrast against white text */
+  --blue-dark: #1d4ed8;
 
   /* Neutrals */
   --white: #ffffff;
@@ -233,6 +235,20 @@ svg {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+}
+
+.brand__version {
+  align-self: center;
+  flex: none;
+  margin-left: var(--sp-1);
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--white);
 }
 
 .brand__text small {
@@ -694,30 +710,41 @@ main {
 
 .filters {
   display: grid;
-  gap: var(--sp-4);
+  gap: var(--sp-5);
   margin-top: var(--sp-5);
 }
 
 .filter-group {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
+  text-align: center;
 }
 
 .filter-group__label {
-  flex: none;
-  min-width: 9.5rem;
   font-size: var(--step--1);
   font-weight: 700;
   color: var(--gray-700);
+}
+
+.filter-group__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-2);
+}
+
+/* Category chip row is the small-screen fallback for the column dropdown. */
+.filter-group--category {
+  display: none;
 }
 
 .chip {
   font: inherit;
   font-size: var(--step--1);
   font-weight: 500;
-  padding: 0.4rem 0.95rem;
+  padding: 0.45rem 1.05rem;
   border: 1px solid var(--gray-300);
   border-radius: var(--radius-pill);
   background: var(--white);
@@ -727,15 +754,124 @@ main {
 }
 
 .chip:hover {
-  border-color: var(--navy);
+  border-color: var(--blue);
   background: var(--gray-50);
 }
 
 .chip[aria-pressed="true"] {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--blue);
+  border-color: var(--blue);
   color: var(--white);
   font-weight: 600;
+}
+
+.chip__count {
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* ---------- Per-column filter dropdown (Category header) ---------- */
+.column-filter {
+  position: relative;
+  display: inline-block;
+  margin-left: var(--sp-2);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.filter-button:hover,
+.filter-button[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.filter-button.is-active {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.filter-button__caret {
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.filter-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 30;
+  min-width: 20rem;
+  max-width: 90vw;
+  max-height: 22rem;
+  overflow-y: auto;
+  padding: var(--sp-2);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.filter-dropdown.is-open {
+  display: block;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  width: 100%;
+  font: inherit;
+  font-size: var(--step--1);
+  font-weight: 500;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  background: none;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+}
+
+.filter-option:hover {
+  background: var(--gray-50);
+}
+
+.filter-option[aria-pressed="true"] {
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.filter-option__count {
+  opacity: 0.7;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  /* On cards, the header (and its dropdown) is hidden — show the chip row. */
+  .filter-group--category {
+    display: flex;
+  }
 }
 
 .results-bar {
@@ -770,12 +906,14 @@ main {
 }
 
 /* ---------- Directory: table ---------- */
+/* overflow is visible (not hidden) so the Category dropdown can escape the
+   table bounds; corners are rounded on the cells instead of by a clip. */
 .table-wrap {
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .tools-table {
@@ -786,6 +924,22 @@ main {
 
 .tools-table thead {
   background: var(--navy);
+}
+
+.tools-table thead th:first-child {
+  border-top-left-radius: var(--radius);
+}
+
+.tools-table thead th:last-child {
+  border-top-right-radius: var(--radius);
+}
+
+.tools-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius);
+}
+
+.tools-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--radius);
 }
 
 .tools-table th {
