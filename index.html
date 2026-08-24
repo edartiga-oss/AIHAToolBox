@@ -31,6 +31,7 @@
         <small>AIHA</small>
         Industrial Hygienist Toolbox
       </span>
+      <span class="brand__version">v1</span>
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="index.html" aria-current="page">Assessment Tools</a>
@@ -69,35 +70,43 @@
 
     <div class="filters">
       <div class="filter-group" role="group" aria-label="Filter by tool type">
-        <span class="filter-group__label">Tool type</span>
-        <button type="button" class="chip" data-filter="type" data-value="" aria-pressed="true">All types</button>
-        <button type="button" class="chip" data-filter="type" data-value="Environmental Assessment" aria-pressed="false">Environmental Assessment (3)</button>
-        <button type="button" class="chip" data-filter="type" data-value="Product Assessment" aria-pressed="false">Product Assessment (8)</button>
-        <button type="button" class="chip" data-filter="type" data-value="Worker Exposure" aria-pressed="false">Worker Exposure (22)</button>
+        <span class="filter-group__label">Filter by Tool Type:</span>
+        <div class="filter-group__chips">
+          <button type="button" class="chip" data-filter="type" data-value="" aria-pressed="true">All Types</button>
+          <button type="button" class="chip" data-filter="type" data-value="environmental assessment" aria-pressed="false">Environmental Assessment <span class="chip__count">(3)</span></button>
+          <button type="button" class="chip" data-filter="type" data-value="product assessment" aria-pressed="false">Product Assessment <span class="chip__count">(8)</span></button>
+          <button type="button" class="chip" data-filter="type" data-value="worker exposure" aria-pressed="false">Worker Exposure <span class="chip__count">(22)</span></button>
+        </div>
       </div>
-      <div class="filter-group" role="group" aria-label="Filter by hazard">
-        <span class="filter-group__label">Hazard</span>
-        <button type="button" class="chip" data-filter="hazard" data-value="" aria-pressed="true">All hazards</button>
-        <button type="button" class="chip" data-filter="hazard" data-value="Chemical" aria-pressed="false">Chemical (24)</button>
-        <button type="button" class="chip" data-filter="hazard" data-value="Physical" aria-pressed="false">Physical (5)</button>
+      <div class="filter-group" role="group" aria-label="Filter by hazard type">
+        <span class="filter-group__label">Filter by Hazard Type:</span>
+        <div class="filter-group__chips">
+          <button type="button" class="chip" data-filter="hazard" data-value="" aria-pressed="true">All Hazards</button>
+          <button type="button" class="chip" data-filter="hazard" data-value="chemical" aria-pressed="false">Chemical <span class="chip__count">(24)</span></button>
+          <button type="button" class="chip" data-filter="hazard" data-value="physical" aria-pressed="false">Physical <span class="chip__count">(5)</span></button>
+        </div>
       </div>
       <div class="filter-group" role="group" aria-label="Filter by exposure route">
-        <span class="filter-group__label">Exposure route</span>
-        <button type="button" class="chip" data-filter="route" data-value="" aria-pressed="true">All routes</button>
-        <button type="button" class="chip" data-filter="route" data-value="inhalation" aria-pressed="false">Inhalation (15)</button>
-        <button type="button" class="chip" data-filter="route" data-value="dermal" aria-pressed="false">Dermal (11)</button>
-        <button type="button" class="chip" data-filter="route" data-value="oral" aria-pressed="false">Oral (4)</button>
+        <span class="filter-group__label">Filter by Exposure Route:</span>
+        <div class="filter-group__chips">
+          <button type="button" class="chip" data-filter="route" data-value="" aria-pressed="true">All Routes</button>
+          <button type="button" class="chip" data-filter="route" data-value="inhalation" aria-pressed="false">Inhalation <span class="chip__count">(15)</span></button>
+          <button type="button" class="chip" data-filter="route" data-value="dermal" aria-pressed="false">Dermal <span class="chip__count">(11)</span></button>
+          <button type="button" class="chip" data-filter="route" data-value="oral" aria-pressed="false">Oral <span class="chip__count">(4)</span></button>
+        </div>
       </div>
-      <div class="filter-group" role="group" aria-label="Filter by category">
-        <span class="filter-group__label">Category</span>
-        <button type="button" class="chip" data-filter="category" data-value="" aria-pressed="true">All categories</button>
-        <button type="button" class="chip" data-filter="category" data-value="Basic Characterization" aria-pressed="false">Basic Characterization (2)</button>
-        <button type="button" class="chip" data-filter="category" data-value="Data Collection" aria-pressed="false">Data Collection (2)</button>
-        <button type="button" class="chip" data-filter="category" data-value="Environmental Risk / Exposure Assessment" aria-pressed="false">Environmental Risk / Exposure Assessment (1)</button>
-        <button type="button" class="chip" data-filter="category" data-value="Preliminary / Initial Exposure Assessment" aria-pressed="false">Preliminary / Initial Exposure Assessment (6)</button>
-        <button type="button" class="chip" data-filter="category" data-value="Product Exposure Modeling" aria-pressed="false">Product Exposure Modeling (4)</button>
-        <button type="button" class="chip" data-filter="category" data-value="Refined Exposure Assessment" aria-pressed="false">Refined Exposure Assessment (9)</button>
-        <button type="button" class="chip" data-filter="category" data-value="Validating Exposure Assessments" aria-pressed="false">Validating Exposure Assessments (1)</button>
+      <div class="filter-group filter-group--category" role="group" aria-label="Filter by category">
+        <span class="filter-group__label">Filter by Category:</span>
+        <div class="filter-group__chips">
+          <button type="button" class="chip" data-filter="category" data-value="" aria-pressed="true">All Categories <span class="chip__count">(25)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="basic characterization" aria-pressed="false">Basic Characterization <span class="chip__count">(2)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="data collection" aria-pressed="false">Data Collection <span class="chip__count">(2)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="environmental risk / exposure assessment" aria-pressed="false">Environmental Risk / Exposure Assessment <span class="chip__count">(1)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="preliminary / initial exposure assessment" aria-pressed="false">Preliminary / Initial Exposure Assessment <span class="chip__count">(6)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="product exposure modeling" aria-pressed="false">Product Exposure Modeling <span class="chip__count">(4)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="refined exposure assessment" aria-pressed="false">Refined Exposure Assessment <span class="chip__count">(9)</span></button>
+          <button type="button" class="chip" data-filter="category" data-value="validating exposure assessments" aria-pressed="false">Validating Exposure Assessments <span class="chip__count">(1)</span></button>
+        </div>
       </div>
     </div>
   </div>
@@ -114,7 +123,19 @@
         <tr>
           <th scope="col">Tool</th>
           <th scope="col">What it does</th>
-          <th scope="col">Category</th>
+          <th scope="col">Category <div class="column-filter">
+      <button type="button" class="filter-button" id="category-filter-btn" aria-haspopup="true" aria-expanded="false"><span aria-hidden="true">&#9889;</span> <span id="category-filter-label">Filter</span> <span class="filter-button__caret" aria-hidden="true">&#9662;</span></button>
+      <div class="filter-dropdown" id="category-dropdown" role="menu" aria-label="Filter by category">
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="" aria-pressed="true"><span>All Categories</span> <span class="filter-option__count">(25)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="basic characterization" aria-pressed="false"><span>Basic Characterization</span> <span class="filter-option__count">(2)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="data collection" aria-pressed="false"><span>Data Collection</span> <span class="filter-option__count">(2)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="environmental risk / exposure assessment" aria-pressed="false"><span>Environmental Risk / Exposure Assessment</span> <span class="filter-option__count">(1)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="preliminary / initial exposure assessment" aria-pressed="false"><span>Preliminary / Initial Exposure Assessment</span> <span class="filter-option__count">(6)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="product exposure modeling" aria-pressed="false"><span>Product Exposure Modeling</span> <span class="filter-option__count">(4)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="refined exposure assessment" aria-pressed="false"><span>Refined Exposure Assessment</span> <span class="filter-option__count">(9)</span></button>
+        <button type="button" class="filter-option" role="menuitemradio" data-filter="category" data-value="validating exposure assessments" aria-pressed="false"><span>Validating Exposure Assessments</span> <span class="filter-option__count">(1)</span></button>
+      </div>
+    </div></th>
           <th scope="col">Developer</th>
           <th scope="col">Output</th>
         </tr>

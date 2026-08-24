@@ -42,6 +42,7 @@ SITE_URL = "https://edartiga-oss.github.io/AIHAToolBox"
 SITE_PATH = (urlparse(SITE_URL).path.rstrip("/") or "") + "/"
 
 SITE_NAME = "AIHA Industrial Hygienist Toolbox"
+VERSION = "v1"  # shown in the header; bump on each published revision
 YEAR = 2025  # footer copyright year; bump when the site content is next revised
 
 ROUTES = [("inhalation", "Inhalation"), ("dermal", "Dermal"), ("oral", "Oral")]
@@ -102,49 +103,90 @@ def page(*, title, description, canonical_path, main, hero="", active="",
         "MAIN": main,
         "SCRIPTS": scripts,
         "YEAR": str(YEAR),
+        "VERSION": esc(VERSION),
         "NAV_TOOLS": ' aria-current="page"' if active == "tools" else "",
         "NAV_DOCS": ' aria-current="page"' if active == "docs" else "",
     })
 
 
 # --------------------------------------------------------------------------- home page
-def filter_group(label: str, name: str, options: list) -> str:
+# Filter controls carry data-value in lowercase to match the lowercased data-*
+# attributes on each row; the directory script compares the two directly.
+def chip(name: str, value: str, text: str, count) -> str:
+    label = esc(text)
+    if count:
+        label += ' <span class="chip__count">(%d)</span>' % count
+    return ('<button type="button" class="chip" data-filter="%s" data-value="%s" '
+            'aria-pressed="%s">%s</button>'
+            % (name, esc(value.lower()), "true" if value == "" else "false", label))
+
+
+def filter_group(label: str, name: str, options: list, extra_class: str = "") -> str:
     """options: list of (value, label, count); value "" means "all"."""
-    chips = [
-        '        <button type="button" class="chip" data-filter="%s" data-value="%s" '
-        'aria-pressed="%s">%s</button>' % (name, esc(value), "true" if value == "" else "false", esc(text))
-        for value, text, _count in options
-    ]
+    chips = "\n          ".join(chip(name, value, text, count) for value, text, count in options)
+    cls = "filter-group" + (" " + extra_class if extra_class else "")
     return (
-        '      <div class="filter-group" role="group" aria-label="Filter by %s">\n'
-        '        <span class="filter-group__label">%s</span>\n%s\n      </div>'
-        % (esc(label.lower()), esc(label), "\n".join(chips))
+        '      <div class="%s" role="group" aria-label="Filter by %s">\n'
+        '        <span class="filter-group__label">Filter by %s:</span>\n'
+        '        <div class="filter-group__chips">\n          %s\n        </div>\n'
+        '      </div>' % (cls, esc(label.lower()), esc(label), chips)
+    )
+
+
+def category_dropdown(options: list) -> str:
+    """The Category column-header filter. options: list of (value, label, count)."""
+    items = []
+    for value, text, count in options:
+        badge = ' <span class="filter-option__count">(%d)</span>' % count if count else ""
+        items.append(
+            '        <button type="button" class="filter-option" role="menuitemradio" '
+            'data-filter="category" data-value="%s" aria-pressed="%s">'
+            '<span>%s</span>%s</button>'
+            % (esc(value.lower()), "true" if value == "" else "false", esc(text), badge)
+        )
+    return (
+        '<div class="column-filter">\n'
+        '      <button type="button" class="filter-button" id="category-filter-btn" '
+        'aria-haspopup="true" aria-expanded="false">'
+        '<span aria-hidden="true">&#9889;</span> <span id="category-filter-label">Filter</span> '
+        '<span class="filter-button__caret" aria-hidden="true">&#9662;</span></button>\n'
+        '      <div class="filter-dropdown" id="category-dropdown" role="menu" '
+        'aria-label="Filter by category">\n%s\n      </div>\n'
+        '    </div>' % "\n".join(items)
     )
 
 
 def build_home(tools: list) -> str:
     def counted(values, key):
+        # (value, plain label, count); the chip/option builders add the count.
         counts = {}
         for tool in tools:
             for value in key(tool):
                 counts[value] = counts.get(value, 0) + 1
-        return [(v, "%s (%d)" % (v, counts[v]), counts[v]) for v in values if counts.get(v)]
+        return [(v, v, counts[v]) for v in values if counts.get(v)]
 
     tool_types = sorted({t for tool in tools for t in tool["tool_type"]})
     hazards = sorted({h for tool in tools for h in tool["hazard_type"]})
     categories = sorted({tool["category"] for tool in tools})
 
     route_counts = [
-        (key, "%s (%d)" % (label, sum(1 for t in tools if key in routes_of(t))),
-         sum(1 for t in tools if key in routes_of(t)))
+        (key, label, sum(1 for t in tools if key in routes_of(t)))
         for key, label in ROUTES
     ]
 
+    type_options = [("", "All Types", 0)] + counted(tool_types, lambda t: t["tool_type"])
+    hazard_options = [("", "All Hazards", 0)] + counted(hazards, lambda t: t["hazard_type"])
+    route_options = [("", "All Routes", 0)] + [r for r in route_counts if r[2]]
+    category_options = [("", "All Categories", len(tools))] + counted(categories, lambda t: [t["category"]])
+
+    # Tool type, hazard, and route are always-visible chip rows. Category is the
+    # column-header dropdown (below), with a chip row that only appears on small
+    # screens where the table — and its header — collapse into cards.
     groups = [
-        filter_group("Tool type", "type", [("", "All types", 0)] + counted(tool_types, lambda t: t["tool_type"])),
-        filter_group("Hazard", "hazard", [("", "All hazards", 0)] + counted(hazards, lambda t: t["hazard_type"])),
-        filter_group("Exposure route", "route", [("", "All routes", 0)] + [r for r in route_counts if r[2]]),
-        filter_group("Category", "category", [("", "All categories", 0)] + counted(categories, lambda t: [t["category"]])),
+        filter_group("Tool Type", "type", type_options),
+        filter_group("Hazard Type", "hazard", hazard_options),
+        filter_group("Exposure Route", "route", route_options),
+        filter_group("Category", "category", category_options, extra_class="filter-group--category"),
     ]
 
     rows = []
@@ -189,6 +231,7 @@ def build_home(tools: list) -> str:
 
     body = fill(read("templates/home.html"), {
         "FILTERS": "\n".join(groups),
+        "CATEGORY_FILTER": category_dropdown(category_options),
         "ROWS": "\n".join(rows),
         "TOOL_COUNT": str(len(tools)),
     })
