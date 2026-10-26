@@ -460,5 +460,95 @@
     "tool_type": [
       "Worker Exposure"
     ]
+  },
+  {
+    "name": "NIOSH Occupational Exposure Banding e-Tool",
+    "slug": "niosh-occupational-exposure-banding",
+    "urls": [
+      "https://wwwn.cdc.gov/NIOSH-OEB/"
+    ],
+    "description": "A free NIOSH web application that assigns a chemical an occupational exposure band (A–E) from its toxicological and hazard data, for chemicals that lack an authoritative occupational exposure limit (OEL). Supports Tier 1 (GHS-based) and Tier 2 (point-of-departure) banding.",
+    "exposure_routes": "Inhalation",
+    "agency": "NIOSH (CDC)",
+    "output": "An occupational exposure band (A–E) — an airborne-concentration range expected to be protective — taken as the most protective band across the evaluated health endpoints.",
+    "category": "Preliminary / Initial Exposure Assessment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "Toxico-kinetic Extended Shift OEL Adjustment",
+    "slug": "oel-adjustment-toxico-kinetic",
+    "urls": [
+      "https://www.aiha.org/public-resources/consumer-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/toxico-kinetic-extended-shift-oel-adjustment"
+    ],
+    "description": "A free AIHA Excel workbook that adjusts a standard 8-hour occupational exposure limit for extended or nonstandard work shifts using the Hickey & Reist toxicokinetic (biological half-life) approach.",
+    "exposure_routes": "Inhalation",
+    "agency": "AIHA (implements the Hickey & Reist method)",
+    "output": "A shift-adjusted (generally reduced) OEL appropriate for the extended or nonstandard work schedule.",
+    "category": "OEL Adjustment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "IRSST OEL Adjustment for Unusual Work Schedules",
+    "slug": "oel-adjustment-irsst",
+    "urls": [
+      "https://www.irsst.qc.ca/en/_outil_100011.html"
+    ],
+    "description": "A computer-based IRSST utility that computes the adjusted average exposure value (AAEV) for work schedules other than 8 hours/day, 5 days/week, implementing IRSST Technical Guide T-22.",
+    "exposure_routes": "Inhalation",
+    "agency": "IRSST (Québec)",
+    "output": "The adjusted average exposure value (AAEV) for the specified schedule, with the substance's IRSST adjustment category.",
+    "category": "OEL Adjustment",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "IHDA-AIHA (IH Data Analyst)",
+    "slug": "ihda-aiha",
+    "urls": [
+      "https://www.aiha.org/public-resources/consumer-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/ihda-aiha"
+    ],
+    "description": "Windows statistical software for interpreting occupational exposure monitoring data — descriptive and compliance statistics, upper tolerance limits, non-detect (censored-data) methods, and Bayesian Decision Charts that assign the AIHA exposure control category (0–4). The AIHA-hosted edition is a free, limited edition.",
+    "exposure_routes": "Inhalation",
+    "agency": "Exposure Assessment Solutions, Inc. (Paul Hewett)",
+    "output": "Descriptive and decision statistics (e.g., UTL 95,95), goodness-of-fit results, non-detect analysis, and Bayesian decision charts giving the probability of each AIHA exposure category.",
+    "category": "Validating Exposure Assessments",
+    "hazard_type": [
+      "Chemical"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
+  },
+  {
+    "name": "COVID-19 Exposure Assessment Tool (CEAT)",
+    "slug": "covid-19-exposure-assessment-tool-ceat",
+    "urls": [
+      "https://www.cov-irt.org/exposure-assessment-tool/"
+    ],
+    "description": "A free Beta tool that estimates a group's relative (not absolute) exposure to SARS-CoV-2 across activities, showing the relative importance of the factors that drive exposure. It combines mechanistic and epidemiological factors and is distributed as an editable PDF.",
+    "exposure_routes": "Inhalation",
+    "agency": "Signature Science, LLC with COV-IRT",
+    "output": "A group-wide relative exposure / relative respiratory-risk value, scaled against a high-risk baseline, for comparing scenarios and controls.",
+    "category": "Pandemic Assessment",
+    "hazard_type": [
+      "Biological"
+    ],
+    "tool_type": [
+      "Worker Exposure"
+    ]
   }
 ]

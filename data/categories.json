@@ -5,5 +5,7 @@
   "Refined Exposure Assessment": "Quantitative models that produce scenario-specific exposure estimates, sometimes including probabilistic or Bayesian treatment of uncertainty.",
   "Validating Exposure Assessments": "Tools used to test or confirm an exposure assessment against measurement data or an alternative method.",
   "Product Exposure Modeling": "Models built for consumer product scenarios, accounting for formulation, use pattern, frequency, and consumer behaviour.",
+  "OEL Adjustment": "Tools that adjust occupational exposure limits for extended or nonstandard work schedules.",
+  "Pandemic Assessment": "Tools for assessing exposure to infectious agents during a pandemic, generally on a relative or comparative basis.",
   "Environmental Risk / Exposure Assessment": "Tools focused on environmental release, indoor and outdoor fate and transport, and community or ecosystem exposure."
 }

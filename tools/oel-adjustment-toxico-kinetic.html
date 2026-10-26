@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toxico-kinetic Extended Shift OEL Adjustment | AIHA Industrial Hygienist Toolbox</title>
+<meta name="description" content="The Toxico-kinetic Extended Shift OEL Adjustment is an AIHA Excel workbook that adjusts a standard 8-hour occupational exposure limit (OEL) for extended…">
+<link rel="canonical" href="https://edartiga-oss.github.io/AIHAToolBox/tools/oel-adjustment-toxico-kinetic.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIHA Industrial Hygienist Toolbox">
+<meta property="og:title" content="Toxico-kinetic Extended Shift OEL Adjustment | AIHA Industrial Hygienist Toolbox">
+<meta property="og:description" content="The Toxico-kinetic Extended Shift OEL Adjustment is an AIHA Excel workbook that adjusts a standard 8-hour occupational exposure limit (OEL) for extended…">
+<meta property="og:url" content="https://edartiga-oss.github.io/AIHAToolBox/tools/oel-adjustment-toxico-kinetic.html">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#002855">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Toxico-kinetic Extended Shift OEL Adjustment",
+  "applicationCategory": "Exposure assessment tool",
+  "description": "The Toxico-kinetic Extended Shift OEL Adjustment is an AIHA Excel workbook that adjusts a standard 8-hour occupational exposure limit (OEL) for extended…",
+  "url": "https://edartiga-oss.github.io/AIHAToolBox/tools/oel-adjustment-toxico-kinetic.html",
+  "author": {
+    "@type": "Organization",
+    "name": "AIHA (implements the Hickey & Reist method)"
+  },
+  "installUrl": "https://www.aiha.org/public-resources/consumer-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/toxico-kinetic-extended-shift-oel-adjustment"
+}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__mark" aria-hidden="true">IH</span>
+      <span class="brand__text">
+        <small>AIHA</small>
+        Industrial Hygienist Toolbox
+      </span>
+      <span class="brand__version">v1</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../index.html" aria-current="page">Assessment Tools</a>
+      <a href="../documentation.html">Supporting Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero hero--compact">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Assessment Tools</a> <span aria-hidden="true">/</span> Toxico-kinetic Extended Shift OEL Adjustment
+    </nav>
+    <h1>Toxico-kinetic Extended Shift OEL Adjustment</h1>
+    <div class="badge-row"><span class="badge badge--hero">OEL Adjustment</span><span class="badge badge--hero">Worker Exposure</span><span class="badge badge--hero">Chemical hazard</span></div>
+  </div>
+</div>
+
+<main id="main">
+<div class="wrap">
+  <div class="tool-layout">
+    <div>
+<section class="panel" id="status">
+<div class="callout callout--info">
+  <p><strong>Provisional entry.</strong> Compiled from public sources and pending confirmation against the developer's official page. Details and the access link may be refined.</p>
+</div>
+</section>
+
+<section class="panel" id="overview">
+<h2>Overview</h2>
+<p>The Toxico-kinetic Extended Shift OEL Adjustment is an AIHA Excel workbook that adjusts a standard 8-hour occupational exposure limit (OEL) for extended or nonstandard work shifts. It applies the toxicokinetic (pharmacokinetic) model of Hickey and Reist (1977), accounting for the contaminant's biological half-life and the worker's schedule — longer exposure periods and shorter recovery periods — so that the adjusted limit preserves the margin of safety assumed by the standard 8-hour limit.</p>
+</section>
+
+<section class="panel" id="exposure-pathway-s">
+<h2>Exposure Pathway(s)</h2>
+<p>Inhalation (airborne chemical time-weighted-average OELs)</p>
+</section>
+
+<section class="panel" id="tool-type">
+<h2>Tool Type</h2>
+<dl class="facts">
+  <div>
+    <dt>Platform</dt>
+    <dd>Excel workbook</dd>
+  </div>
+  <div>
+    <dt>Macro-enabled</dt>
+    <dd>No</dd>
+  </div>
+</dl>
+</section>
+
+<section class="panel" id="use-cases-when-to-use-applications">
+<h2>Use Cases (When to Use / Applications)</h2>
+<p>Adjusting 8-hour TWA chemical OELs for workers on extended or compressed schedules (for example 10- or 12-hour shifts, or more than 40 hours per week), where increased exposure time and reduced recovery time would otherwise allow body burden to exceed that assumed by the standard limit.</p>
+</section>
+
+<section class="panel" id="inputs-and-outputs">
+<h2>Inputs & Outputs</h2>
+<h3>Inputs (What you provide)</h3>
+<p>The standard 8-hour TWA OEL; the nonstandard work schedule (hours per day and days per week); and the substance's biological half-life. A separate tab handles chemicals whose half-life is unknown.</p>
+<h3>Outputs (What you get)</h3>
+<p>A shift-adjusted (generally reduced) OEL appropriate for the extended or nonstandard schedule.</p>
+</section>
+
+<section class="panel" id="known-limitations-notes">
+<h2>Known Limitations / Notes</h2>
+<div class="callout callout--warn">
+  <ul class="bullets">
+    <li>Applicable only to chemicals whose limits are based on accumulated systemic body burden — not to limits driven by odor, irritancy, or other acute, non-systemic effects.</li>
+    <li>Requires a biological half-life, which is unavailable for many chemicals (hence the separate "unknown half-life" tab).</li>
+    <li>As a pharmacokinetic method it gives the least conservative adjustment of the common approaches, and half-life estimates can be rough.</li>
+  </ul>
+</div>
+</section>
+
+<section class="panel" id="authors-developers">
+<h2>Authors / Developers</h2>
+<p>Published by AIHA. The workbook implements the method of J. L. S. Hickey &amp; P. C. Reist, "Application of Occupational Exposure Limits to Unusual Work Schedules," <em>Am. Ind. Hyg. Assoc. J.</em> 38(11):613–621 (1977), as presented by Armstrong et al.</p>
+</section>
+
+<section class="panel" id="references-sources">
+<h2>References & Sources</h2>
+<ul class="resource-list">
+  <li><a href="https://www.aiha.org/public-resources/consumer-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/toxico-kinetic-extended-shift-oel-adjustment" target="_blank" rel="noopener noreferrer">AIHA — Toxico-kinetic Extended Shift OEL Adjustment</a></li>
+</ul>
+</section>
+<nav class="page-nav" aria-label="Tool">
+  <a href="the-advanced-reach-tool-v20.html"><span>Previous</span><strong>The Advanced REACH Tool v2.0</strong></a>
+  <a href="unifac-calculator.html"><span>Next</span><strong>UNIFAC Calculator</strong></a>
+</nav>
+    </div>
+    <aside class="tool-aside" aria-label="Tool summary">
+<section class="panel">
+<h2>Get the tool</h2>
+  <div class="tool-links">
+      <a class="btn btn--primary" href="https://www.aiha.org/public-resources/consumer-resources/apps-and-tools-resource-center/aiha-risk-assessment-tools/toxico-kinetic-extended-shift-oel-adjustment" target="_blank" rel="noopener noreferrer">Access the tool &rarr;</a>
+  </div>
+</section>
+<section class="panel">
+<h2>At a glance</h2>
+  <ul class="aside-list">
+    <li><div class="aside-label">Assessment phase</div><div>Applied to OELs after exposure assessment (limit adjustment)</div></li>
+    <li><div class="aside-label">Exposure routes</div><div>Inhalation</div></li>
+    <li><div class="aside-label">Hazard types</div><div>Chemical</div></li>
+    <li><div class="aside-label">Applies to</div><div>Worker Exposure</div></li>
+    <li><div class="aside-label">Assessment category</div><div>OEL Adjustment</div></li>
+    <li><div class="aside-label">Developer</div><div>AIHA (implements the Hickey &amp; Reist method)</div></li>
+  </ul>
+</section>
+<section class="panel">
+<h2>Same category</h2>
+  <ul class="aside-list">
+    <li><a href="oel-adjustment-irsst.html">IRSST OEL Adjustment for Unusual Work Schedules</a></li>
+  </ul>
+</section>
+    </aside>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>&copy; 2025 AIHA Industrial Hygienist Toolbox &middot; For educational and professional use.</p>
+    <nav aria-label="Footer">
+      <a href="../index.html">Assessment Tools</a>
+      <a href="../documentation.html">Supporting Documentation</a>
+      <a href="https://www.aiha.org/" target="_blank" rel="noopener noreferrer">AIHA.org</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
