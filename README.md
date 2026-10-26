@@ -47,6 +47,14 @@ Always run `scripts/build.py` after editing anything in `data/`, `content/`, or 
 commit the regenerated pages along with your source change. CI runs `build.py --check` and fails
 the build if the committed pages are out of date.
 
+### Versioning
+
+The badge in the header (v1, v2, …) is `VERSION` in `scripts/build.py`. Every change that alters
+the published site — pages, tool pages, or styling — must bump it (v2 → v3) and rebuild. On pull
+requests, CI runs `scripts/check_version.py`, which fails if published files changed but the
+version did not go up. Changes only to `docs/`, this README, or other files the site does not serve
+need no bump. To check a branch locally: `python3 scripts/check_version.py origin/main`.
+
 ## Editing content
 
 **Fix a description, developer, or category** — edit `data/tools.json` and rebuild. This file is

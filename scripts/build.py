@@ -42,7 +42,9 @@ SITE_URL = "https://edartiga-oss.github.io/AIHAToolBox"
 SITE_PATH = (urlparse(SITE_URL).path.rstrip("/") or "") + "/"
 
 SITE_NAME = "AIHA Industrial Hygienist Toolbox"
-VERSION = "v1"  # shown in the header; bump on each published revision
+# Shown in the header badge. Bump it (v2 -> v3 ...) in every change that alters the
+# published site; scripts/check_version.py fails pull requests that forget.
+VERSION = "v2"
 YEAR = 2025  # footer copyright year; bump when the site content is next revised
 
 ROUTES = [("inhalation", "Inhalation"), ("dermal", "Dermal"), ("oral", "Oral")]
