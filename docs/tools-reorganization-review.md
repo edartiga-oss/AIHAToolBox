@@ -97,7 +97,7 @@ re-categorization decision.
 | Exposure / Control Banding | NIOSH Exposure Banding, Stoffenmanager 8.2 (already here), "Other? (not COSHH)" | ◐ Stoffenmanager present; NIOSH Exposure Banding ⚠ to add |
 | Heat / Thermal Stress | AIHA tool + IRSST tools; links to heat-stress calcs and ergo apps | ⚠ not in current data |
 | Ergonomic Assessment | NIOSH Ergomine, NIOSH Lifting Equation, AIHA Ergo kit (tool or reference?) | ⚠❓ |
-| Pandemic Assessment | COV-IRT LLC Exposure Assessment Tool (CEAT) — full description supplied in the doc | ◐ content exists in the proposal; can add if AIHA wants a Pandemic category and a link |
+| Pandemic Assessment | COV-IRT LLC Exposure Assessment Tool (CEAT) — full description supplied in the doc | ◐ content exists in the proposal; can add if AIHA wants a Pandemic category and a link. _Naming note: the authoritative name is the **COVID-19 Exposure Assessment Tool (CEAT)**, by Signature Science, LLC with COV-IRT — see `candidate-tools-research.md`._ |
 | Business Case | AIHA Business Case Tool | ⚠ needs link/description |
 | OEL Adjustment | Toxico-kinetic Extended Shift adjustment; IRSST method (link + doc); IH calc for B&S method | ◐ overlaps the two OEL tools flagged in the original UPDATE_SUMMARY |
 | EPA Risk & Exposure Assessment Tools | 10 EPA links (Air Quality, Ecological Risk, the six ExpoBox families, TSCA, pesticides, human health) | ◐ links are in the proposal; would be a reference/links block, possibly cross-listed under Product Assessment |
