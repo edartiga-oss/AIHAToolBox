@@ -321,16 +321,19 @@
     ]
   },
   {
-    "name": "FRC Assessment Tool",
+    "name": "FR Assessment Tool",
     "slug": "frc-assessment-tool",
-    "urls": [],
-    "description": "",
-    "exposure_routes": "",
-    "agency": "",
-    "output": "",
+    "urls": [
+      "https://www.aiha.org/public-resources/healthierworkplaces/workplace-hazards/apps-and-tools-resource-center/aiha-risk-assessment-tools/fr-assessment-tool"
+    ],
+    "description": "A simple Excel spreadsheet that helps health and safety professionals assess a work area and document the decision on whether flame-resistant (FR) clothing is needed, and the level of protection required, when working around flammable materials.",
+    "exposure_routes": "Dermal",
+    "agency": "AIHA Protective Clothing & Equipment Committee",
+    "output": "A documented record of the FR-clothing decision for each assessed task, process, or operation, with required actions, due dates, and assessment-team sign-off.",
     "category": "Refined Exposure Assessment",
     "hazard_type": [
-      "Chemical"
+      "Chemical",
+      "Physical"
     ],
     "tool_type": [
       "Worker Exposure"
@@ -412,10 +415,10 @@
     "urls": [
       "https://aiha-assets.sfo2.digitaloceanspaces.com/AIHA/resources/Odor_Detection_Irritation_Estimation.xlsx"
     ],
-    "description": "",
-    "exposure_routes": "",
-    "agency": "",
-    "output": "",
+    "description": "An Excel spreadsheet that estimates a compound's odor detection, eye irritation, and nasal pungency thresholds when no published thresholds exist — intended for basic screening and comparison between compounds, not where exposure limits or toxicity data already exist.",
+    "exposure_routes": "Inhalation",
+    "agency": "Patrick Owens",
+    "output": "Estimated odor detection, eye irritation, and nasal pungency thresholds (ppmv).",
     "category": "Basic Characterization",
     "hazard_type": [
       "Chemical"
