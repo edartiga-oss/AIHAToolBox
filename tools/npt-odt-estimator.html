@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NPT-ODT Estimator | AIHA Industrial Hygienist Toolbox</title>
-<meta name="description" content="NPT-ODT Estimator — part of the AIHA Industrial Hygienist Toolbox.">
+<meta name="description" content="The Nasal Pungency and Odor Detection Threshold (NPT-ODT) Estimator is a supplemental tool for the Odor Thresholds for Chemicals resource. This Excel…">
 <link rel="canonical" href="https://edartiga-oss.github.io/AIHAToolBox/tools/npt-odt-estimator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIHA Industrial Hygienist Toolbox">
 <meta property="og:title" content="NPT-ODT Estimator | AIHA Industrial Hygienist Toolbox">
-<meta property="og:description" content="NPT-ODT Estimator — part of the AIHA Industrial Hygienist Toolbox.">
+<meta property="og:description" content="The Nasal Pungency and Odor Detection Threshold (NPT-ODT) Estimator is a supplemental tool for the Odor Thresholds for Chemicals resource. This Excel…">
 <meta property="og:url" content="https://edartiga-oss.github.io/AIHAToolBox/tools/npt-odt-estimator.html">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#002855">
@@ -23,8 +23,12 @@
   "@type": "SoftwareApplication",
   "name": "NPT-ODT Estimator",
   "applicationCategory": "Exposure assessment tool",
-  "description": "NPT-ODT Estimator — part of the AIHA Industrial Hygienist Toolbox.",
+  "description": "The Nasal Pungency and Odor Detection Threshold (NPT-ODT) Estimator is a supplemental tool for the Odor Thresholds for Chemicals resource. This Excel…",
   "url": "https://edartiga-oss.github.io/AIHAToolBox/tools/npt-odt-estimator.html",
+  "author": {
+    "@type": "Organization",
+    "name": "Patrick Owens"
+  },
   "installUrl": "https://aiha-assets.sfo2.digitaloceanspaces.com/AIHA/resources/Odor_Detection_Irritation_Estimation.xlsx"
 }</script>
 </head>
@@ -62,11 +66,94 @@
 <div class="wrap">
   <div class="tool-layout">
     <div>
-<div class="callout callout--info panel">
-<p><strong>Write-up in progress.</strong> This tool is part of the toolbox, but its detailed documentation has not been published yet. The reference links below go straight to the developer&rsquo;s own material.</p>
+<section class="panel" id="overview">
+<h2>Overview</h2>
+<p>The Nasal Pungency and Odor Detection Threshold (NPT-ODT) Estimator is a supplemental tool for the Odor Thresholds for Chemicals resource. This Excel spreadsheet estimates the concentration of a compound's odor detection or nasal pungency thresholds when no published thresholds exist.</p>
+<p>Do not use the estimator if existing exposure limits, toxicity data, or any other toxicological information are available, or if the compound is biologically reactive or acts by a specific toxic mechanism. It is best used to make general, basic comparisons between two compounds' odor or irritation potential.</p>
+</section>
+
+<section class="panel" id="exposure-pathway-s">
+<h2>Exposure Pathway(s)</h2>
+<p>Inhalation (primary)</p>
+</section>
+
+<section class="panel" id="tool-type">
+<h2>Tool Type</h2>
+<dl class="facts">
+  <div>
+    <dt>Platform</dt>
+    <dd>Excel spreadsheet</dd>
+  </div>
+  <div>
+    <dt>Macro-enabled</dt>
+    <dd>No</dd>
+  </div>
+</dl>
+</section>
+
+<section class="panel" id="use-cases-when-to-use-applications">
+<h2>Use Cases (When to Use / Applications)</h2>
+<p>The NPT-ODT Estimator is typically used when:</p>
+<ul class="bullets">
+  <li>You want to screen potential compounds for use in the workplace, or</li>
+  <li>You want to compare potential thresholds between compounds.</li>
+</ul>
+</section>
+
+<section class="panel" id="inputs-and-outputs">
+<h2>Inputs & Outputs</h2>
+<h3>Inputs (What you provide)</h3>
+<ul class="bullets">
+  <li>The percentile of the population for the desired threshold estimate (Row 11, Column N); for example, &ldquo;50&rdquo; gives the average person's threshold, while &ldquo;5&rdquo; gives the threshold for the fifth percentile of the population.</li>
+  <li>For the compound of interest, the number of each of the fragments making up the compound (starting on Row 13, Column M). For example, n-nonane has two &ldquo;-CH3&rdquo; fragments and seven &ldquo;&gt;CH2&rdquo; fragments.</li>
+</ul>
+<h3>Outputs (What you get)</h3>
+<ul class="bullets">
+  <li>Estimated odor detection threshold (ppmv)</li>
+  <li>Estimated eye irritation threshold (ppmv)</li>
+  <li>Estimated nasal pungency threshold (ppmv)</li>
+</ul>
+</section>
+
+<section class="panel" id="access-requirements-and-technical-notes">
+<h2>Access, Requirements & Technical Notes</h2>
+<h3>How to access</h3>
+<p>The NPT-ODT Estimator is available as a downloadable Microsoft Excel workbook. Instructions and illustrations of the reference tables are provided on the first tab, &ldquo;Read Me First.&rdquo;</p>
+<h3>System requirements</h3>
+<p>Microsoft Excel is required.</p>
+</section>
+
+<section class="panel" id="versions-update-history">
+<h2>Versions / Update History</h2>
+<p>Latest version: 2014.</p>
+</section>
+
+<section class="panel" id="authors-developers">
+<h2>Authors / Developers</h2>
+<p>Patrick Owens.</p>
+</section>
+
+<section class="panel" id="training-and-resources">
+<h2>Training & Resources</h2>
+<p>See the &ldquo;Read Me First&rdquo; tab on the spreadsheet.</p>
+</section>
+
+<section class="panel" id="known-limitations-notes">
+<h2>Known Limitations / Notes</h2>
+<div class="callout callout--warn">
+  <ul class="bullets">
+    <li>Recommended for use only when published odor thresholds are not available.</li>
+    <li>The equation estimates are based on measured thresholds from a limited number of compounds. Avoid assuming the tool provides accurate estimates for very large and complex compounds, such as those with more than 20 non-hydrogen atoms.</li>
+  </ul>
 </div>
+</section>
+
+<section class="panel" id="related-tools">
+<h2>Related Tools</h2>
+<p>None currently identified.</p>
+</section>
 <nav class="page-nav" aria-label="Tool">
-  <a href="nanosafer.html"><span>Previous</span><strong>NanoSafer</strong></a>
+  <a href="niosh-occupational-exposure-banding.html"><span>Previous</span><strong>NIOSH Occupational Exposure Banding e-Tool</strong></a>
   <a href="odhmod.html"><span>Next</span><strong>ODHMOD</strong></a>
 </nav>
     </div>
@@ -80,10 +167,12 @@
 <section class="panel">
 <h2>At a glance</h2>
   <ul class="aside-list">
-    <li><div class="aside-label">Assessment phase</div><div>Basic Categorization</div></li>
+    <li><div class="aside-label">Assessment phase</div><div>Basic Characterization (Step 2)</div></li>
+    <li><div class="aside-label">Exposure routes</div><div>Inhalation</div></li>
     <li><div class="aside-label">Hazard types</div><div>Chemical</div></li>
     <li><div class="aside-label">Applies to</div><div>Worker Exposure</div></li>
     <li><div class="aside-label">Assessment category</div><div>Basic Characterization</div></li>
+    <li><div class="aside-label">Developer</div><div>Patrick Owens</div></li>
   </ul>
 </section>
 <section class="panel">

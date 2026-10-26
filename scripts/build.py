@@ -156,7 +156,7 @@ def category_dropdown(options: list) -> str:
     )
 
 
-def build_home(tools: list) -> str:
+def build_home(tools: list, category_order: list) -> str:
     def counted(values, key):
         # (value, plain label, count); the chip/option builders add the count.
         counts = {}
@@ -167,7 +167,11 @@ def build_home(tools: list) -> str:
 
     tool_types = sorted({t for tool in tools for t in tool["tool_type"]})
     hazards = sorted({h for tool in tools for h in tool["hazard_type"]})
-    categories = sorted({tool["category"] for tool in tools})
+    # Categories follow the assessment-workflow order defined in data/categories.json
+    # (Data Collection -> Basic Characterization -> ... -> Environmental), not
+    # alphabetical order, so the filter reads as a progression through the workflow.
+    present = {tool["category"] for tool in tools}
+    categories = [c for c in category_order if c in present]
 
     route_counts = [
         (key, label, sum(1 for t in tools if key in routes_of(t)))
@@ -482,7 +486,7 @@ def render_all() -> dict:
             raise SystemExit("missing content/tools/%s.html" % tool["slug"])
 
     files = {
-        "index.html": build_home(tools),
+        "index.html": build_home(tools, list(categories)),
         "documentation.html": build_documentation(categories, tools),
         "404.html": build_404(),
         "sitemap.xml": build_sitemap(tools),
